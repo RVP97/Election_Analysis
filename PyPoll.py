@@ -13,3 +13,4 @@ with open(file_to_load) as election_data:
     # Read and print the header row.
     headers = next(file_reader)
     print(headers)
+    # Read and print each row in the CSV file.
