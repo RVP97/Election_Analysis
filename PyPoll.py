@@ -1,9 +1,7 @@
 # Add our dependencies.
 import csv
 import os
-import timeit
 
-time = timeit.default_timer()
 # Assign a variable to load a file from a path.
 file_to_load = os.path.join("Resources", "election_results.csv")
 # Assign a variable to save the file to a path.
@@ -75,6 +73,3 @@ with open(file_to_save, "w") as txt_file:
     print(winning_candidate_summary)
     # Save the winning candidate's results to the text file.
     txt_file.write(winning_candidate_summary)
-
-timeend = timeit.default_timer()
-print(f"Time: {timeend - time}")
