@@ -34,6 +34,7 @@ with open(file_to_load) as election_data:
         if votes > winning_count:
             winning_count = votes
             winner_name = name
+# Print the total number of votes using f strings
 print(f'''
 -------------------------
 Winner: {winner_name}
