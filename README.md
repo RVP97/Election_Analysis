@@ -98,18 +98,27 @@ text data into a single variable:
   ```
 
 ## Election-Audit Summary
+The election commission should consider using this script or a modified version of it to analyze the results of the
+next elections, either locally or nationally. This will be quite efficient and error-proof ways to analyze the results
+and share them with the public.
+<br><br>
+There could be various ways in which each election adapts the script to better suit its needs. The following are
+suggestions in which the script can be modified for other elections:
+1. Since Python capabilities and libraries are vast, the elections officials could use an API to post the results
+to their official Twitter page or create a mass email (could use yagmail or SMTPEmail) with the results.
+2. The CSV could contain another column with more data such as the voting time to better understand the voting patterns
+that occur in each county.
+3. Instead of creating a text file, the script could create a database and store the results in a database. Or it could
+also store the results in a formatted Excel file using the XlsxWriter module.
+4. The script could also access the data from an API or a government database instead of the CSV file. This would be
+done for data safekeeping and prevent any possible modifications.
 
 ## Challenge Overview
 There were several challenges that needed to be addressed for the analysis to be successful.
 - A CSV had to be read in and parsed to obtain the data from the election, including the number of votes cast,
-the candidates, and the votes received by each candidate
-- A for loop was used to iterate through the data to calculate the total number of votes cast, the number of votes
-- If statements were used to correctly add each vote to the correct candidate
+the candidates, and the votes received by each candidate and county
+- A for loop was used to iterate through the data to calculate the total number of votes cast
+- If statements were used to correctly add each vote to the correct candidate and county
 - These data was stored in a dictionary for easy access
-- The percentage of votes each candidate won was calculated by dividing the number of votes received by the total
+- The percentage of votes each candidate and county won was calculated by dividing the number of votes received by the total
 - The final result summary was saved in a text file in a separate folder
-
-## Challenge Summary
-Creating a script that automatically generates a text file with the results of the election was the main challenge
-addresses by the analysis. The script was created to be able to be run from the command line. Even though this project
-was created with the congressional election in mind, it has the required portability to be used for other elections.
